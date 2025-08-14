@@ -1,4 +1,4 @@
-name: Simple CQRS Bank Application CI
+name: Build & Test
 
 on:
   push:
