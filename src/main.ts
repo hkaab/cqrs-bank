@@ -19,18 +19,12 @@ const _ = new EventLogger();
 const withdrawCommandHandler: ICommandHandler<WithdrawCommand> = new WithdrawCommandHandler(accountService);
 const getBalanceQueryHandler: IQueryHandler<GetBalanceQuery, Balance | undefined> = new GetBalanceQueryHandler(accountService);
 
-// --- New: Subscribing to events directly in main.ts using RxJS's filter operator ---
+// Subscribing to events directly in main.ts using RxJS's filter operator ---
 import { filter } from 'rxjs/operators';
 eventStream.pipe(filter(event => event.eventName === 'MoneyWithdrawnEvent'))
     .subscribe(event => {
         const typedEvent = event as MoneyWithdrawnEvent;
         console.log(`(main.ts listener) A withdrawal of ${typedEvent.amount} has occurred from account ${typedEvent.accountId}.`);
-    });
-
-eventStream.pipe(filter(event => event.eventName === 'MoneyDepositedEvent'))
-    .subscribe(event => {
-        const typedEvent = event as MoneyDepositedEvent;
-        console.log(`(main.ts listener) A deposit of ${typedEvent.amount} has been made to account ${typedEvent.accountId}.`);
     });
 
 async function run() {
