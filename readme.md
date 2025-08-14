@@ -5,7 +5,7 @@
 
 # Project Overview
 
-The application simulates a simple banking system where you can perform deposits, withdrawals, and check account balances. The core design principles are:
+The application simulates a simple banking system where you can perform withdrawals, and check account balances. The core design principles are:
 
 - Commands: Actions that modify the state of the system (e.g., `WithdrawCommand`).
 
