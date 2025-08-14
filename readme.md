@@ -1,5 +1,7 @@
 # 🏦 Simple CQRS-BANK 
 
+![workflow](https://github.com/hkaab/cqrs-bank/actions/workflows/ci.yml/badge.svg)
+
  **CQRS and Event Sourcing with TypeScript and RxJS**
 
 
