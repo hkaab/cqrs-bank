@@ -1,5 +1,4 @@
-# CQRS-BANK
-# CQRS and Event Sourcing with TypeScript and RxJS
+# Simple CQRS-BANK : CQRS and Event Sourcing with TypeScript and RxJS
 
 
 # Project Overview
